@@ -1,0 +1,20 @@
+<h1>Score List</h1>
+    <h3>{{errorMsg}}</h3>
+
+    <p style="color:black">WELCOME {{students[students?.length - 1].username}}</p> 
+
+    <ul *ngFor="let employee of employees">
+       <div *ngIf="employee.username === stu">
+         <li>Username:{{employee.username}} Score:{{employee.score}}</li>
+        </div>
+    </ul>
+
+    <ul *ngFor="let employeee of employees2">
+       <div *ngIf="employeee.username === stu">
+            <h2> HEY!!! Welcome {{employeee.username}}...</h2>
+         <li>Firstname:{{employeee.firstname}} Lastname:{{employeee.lastname}} Email:{{employeee.email}}</li>
+        </div>
+    </ul>
+
+
+

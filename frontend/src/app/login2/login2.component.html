@@ -1,0 +1,88 @@
+<div [ngStyle]="{'background-image': geturl(),'background-size':getsize(),'height': '100%','background-position':'center'}">
+<div class="container">
+    <h1 *ngIf="!verify" style="color:blue"> Your new score is {{xyz}}</h1>
+   <div *ngIf="verify" class="text-info text-md-center"><h1 >Login Done Successfully</h1>
+     <img src="https://i.pinimg.com/564x/f4/24/a7/f424a79b5db74e7daccf18bce4d2f650.jpg" alt="">
+   </div>
+   <div class="login-box" style="position:absolute;left:90%;transform:translate(-50%,-50%)">
+     
+    <form #userForm="ngForm" *ngIf="!verify" (ngSubmit)="onSubmit()" novalidate >
+        <!-- {{userForm.invalid |json}}
+        {{userModel | json}} -->
+        <div class="form-group">
+                <div class="textbox"> 
+               <div class="input-group"> 
+                 
+                  <div class="input-group-prepend">  
+                    
+                    <span class="input-group-text">  
+                       <i class="fas fa-user"></i>  
+                    </span>  
+                  </div>  
+                  <input type="text" required minlength=3 #username="ngModel" class="form-control" [class.is-invalid]="username.touched && username.invalid"  name="username" [(ngModel)]="userModel.username">
+               </div>  
+            </div>
+            <div *ngIf="username.errors && (username.invalid || username.touched)">
+                <small class="text-danger" *ngIf="username.errors.required"></small>
+                <small class="text-danger" *ngIf="username.errors.minlength">username number must be atleast 3digit long </small>
+            </div>
+            
+        </div>
+    <div class="form-group">
+        <div class="textbox">
+        <div class="input-group">  
+                  <div class="input-group-prepend">  
+                    <span class="input-group-text">  
+                      <i class="fas fa-lock"></i>
+                     </span>  
+                  </div>  
+        <input type="password" required #password="ngModel" class="form-control" [class.is-invalid]="password.touched && password.invalid"  name="password" [(ngModel)]="userModel.password">
+        </div>
+        </div>
+        <div *ngIf="password.errors && (password.invalid || password.touched)">
+            <small class="text-danger" *ngIf="password.errors.required"></small>
+        </div>
+    
+    </div>
+     <br/><br/><br/><br/><br/>
+    <button [disabled]="userForm.invalid" style="color:green" type="submit" (click)="Submit()" id="btn" class="btn btn-primary">
+        OK
+    </button><br>
+    </form>
+    </div>
+     <img src = "assets/scholar.jpg" style="width:350px;height:430px;border-radius: 50%;position:absolute;left:90%;top:40%;transform:translate(-50%,-50%)"/>
+     <button type="submit" style="color:blue;background-color:white;font-family:tahoma;border-radius: 20%;position:absolute;left:40%;top:33%;transform:translate(-50%,-50%)" class="btn btn-success"><h1>YOUR SCORE IS UPDATED</h1></button>
+</div>
+<div style="position:absolute;top:50%;left:40%;transform:translate(-50%,-50%)">
+<table class="table table-hover">
+<tr style="color:black">
+<th>Id</th>
+<th>Set_ID</th>
+<th>Q_no</th>
+<th>Correct Answer</th>
+<th>Your Response</th>
+</tr>
+<tr style="color:black" *ngFor="let val of final;let i=index">
+<td>{{i+1}}</td>
+<td>{{val[0][i]}}</td>
+<td>{{val[1][i]}}</td>
+<td>{{val[2][i]}}</td>
+<td>{{this.response[i]}}</td>
+</tr>
+</table>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+<div style="background-color:black;height:43px;width:550px;position:absolute;left:80%;top:9%;transform:translate(-50%,-50%)"></div>
+
+<div style="background-color:black;height:45px"></div>
+
+
+
+
+
+
+
+
+

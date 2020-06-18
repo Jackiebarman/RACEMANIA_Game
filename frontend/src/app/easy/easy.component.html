@@ -1,0 +1,32 @@
+
+<body>
+<div [ngStyle]="{'background-image': geturl(),'background-size':getsize(),'height': '30%','background-position':'center'}">
+    <button (click)=call()> <h1 style="color:white"> Start Quiz </h1> </button>
+     
+	<div class="quiz_wrapper">
+           
+           <div class="question" id="questionBox">
+           	
+           </div>
+           
+           <div class="options">
+           	  <ul id="ul">
+           	  	  <li id="op1" (click)="button($event)" type="button"></li>
+           	  	  <li id="op2" (click)="button($event)" type="button"></li>
+           	  	  <li id="op3" (click)="button($event)" type="button"></li>
+           	  	  <li id="op4" (click)="button($event)" type="button"></li>
+           	  </ul>
+           </div>
+           <div class="score">
+           	   <div class="next">
+           	   	  <button type="button" (click)=next() id="button">Next</button>
+           	   </div>
+           	   <div class="score-card">
+           	   	  Score : <span id="scoreCard">0</span>
+           	   </div>
+           </div>
+
+	</div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+</body>

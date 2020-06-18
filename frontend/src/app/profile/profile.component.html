@@ -1,0 +1,56 @@
+
+<button style="position:absolute;left:40%;top:13%;transform:translate(-50%,-50%)" routerLink="/history" class="btn">
+         
+          <p class="neon_a" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+           SUBMISSION
+           </p>
+          
+        </button>
+     <button style="position:absolute;left:55%;top:13%;transform:translate(-50%,-50%)" routerLink="/exam" class="btn">
+          
+          <p class="neon_a" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+           START TEST
+           </p>
+         
+        </button> 
+          
+<div [ngStyle]="{'background-image': geturl(),'background-size':getsize(),'height': '100%','background-position':'center'}">
+<h1 style="color:white;position:absolute;left:15%;top:20%;transform:translate(-50%,-50%)"><p style="color:black">WELCOME {{students[students?.length - 1].username}}</p></h1>
+
+<h2 style="color:white;position:absolute;left:20%;top:50%;transform:translate(-50%,-50%)">
+
+    <ul style="color:white" *ngFor="let employeee of employees2">
+       <div *ngIf="employeee.username === stu">
+         <a class="profile" style="color:black"> Your Rank is : <a style="color:white">{{barman}}</a> </a><br/> <br/>
+         <a class="profile" style="color:black"> Firstname : <a style="color:white">{{employeee.firstname}}</a> </a><br/> <br/>
+         <a class="profile" style="color:black">Lastname : <a style="color:white">{{employeee.lastname}} </a></a><br/> <br/>
+         <a class="profile" style="color:black">Email : <a style="color:white">{{employeee.email}} </a></a><br/> <br/>
+         <a class="profile" style="color:black"> Address : <a style="color:white">{{employeee.address}}</a> </a><br/> <br/>
+         <a class="profile" style="color:black">Phone : <a style="color:white">{{employeee.phone}} </a></a><br/>
+        </div>
+    </ul>
+    
+    <ul style="color:blue" *ngFor="let employee of employees">
+       <div *ngIf="employee.username === stu">
+            
+         <a class="profile" style="color:black"> Username : <a style="color:white">{{employee.username}} </a></a><br/> <br/>
+    <a class="profile" style="color:black;position:absolute;left:190%;top:-1%;transform:translate(-50%,-50%)">Score: <input style="color:black" type="text" class="form-control" value={{employee.score}}></a>
+        </div>
+    </ul>
+     </h2>
+
+ <img src = "assets/scholar.jpg" style="width:250px;height:250px;border-radius: 50%;position:absolute;left:50%;top:45%;transform:translate(-50%,-50%)"/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/>
+</div>
+
+<div style="background-color:black;height:43px;width:550px;position:absolute;left:80%;top:9%;transform:translate(-50%,-50%)"></div>
+<div style="background-color:black;height:55px"></div>
