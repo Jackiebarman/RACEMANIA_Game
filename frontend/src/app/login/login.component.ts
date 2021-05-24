@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   constructor(public _http:HttpClient,public router:Router,private homeservice:UsersService) { }
   geturl()
   {
-    return "url('assets/bg2.jpg')";
+    return "url('assets/car_img/back_car.jpg')";
   }
   getsize()
   {

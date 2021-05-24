@@ -5,6 +5,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
+
+import { AppService } from './services/app.service';
+import { GameService } from './services/game.service';
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,6 +30,12 @@ import { ScoreComponent } from './score/score.component';
 import { Login2Component } from './login2/login2.component';
 import { HistoryComponent } from './history/history.component';
 import { Login3Component } from './login3/login3.component';
+import { Game2Component } from './game2/game2.component';
+import { GameComponent } from './game/game.component';
+import { PlayComponent } from './play/play.component';
+import { FunzoneComponent } from './funzone/funzone.component';
+import { RacecoinComponent } from './racecoin/racecoin.component';
+import { SorryComponent } from './sorry/sorry.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +56,13 @@ import { Login3Component } from './login3/login3.component';
     ScoreComponent,
     Login2Component,
     HistoryComponent,
-    Login3Component
+    Login3Component,
+    Game2Component,
+    GameComponent,
+    PlayComponent,
+    FunzoneComponent,
+    RacecoinComponent,
+    SorryComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +70,7 @@ import { Login3Component } from './login3/login3.component';
     FormsModule,
     HttpClientModule
   ], 
-  providers: [EnrollmentService,UsersService,EmployeeService],
+  providers: [EnrollmentService,UsersService,EmployeeService,AppService, GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

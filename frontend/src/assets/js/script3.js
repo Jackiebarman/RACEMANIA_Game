@@ -11,11 +11,12 @@
 
       var app={
                 questions:[
-                          {q:'WTA stands for?', options:['We are the aliens','Web Technology apple','Web Technology and application','Web Technology application'],answer:3},
+                          {q:'Pollution Under Control Certificate or PUC is valid for ', options:['2 years','24 months','180 days','One year'],answer:3},
 
-                          {q:'DBMS stands for ?',options:['database management system','database management software','databackground management software','none of the above'],answer:1},
+                          {q:'How do you know that a vehicle is a transport vehicle? ',options:['By seeing the number plate of the vehicle','By the driver’s license','By the make of the vehicle','None of the above'],answer:1},
 
-                          {q:'OS stands for ?',options:['Operating Software','Operating System','Open software','open system'],answer:2}
+                          {q:'Overtaking is allowed only: ',options:['From the left side','From the right side','After honking 3 times','All of the above'],answer:2}
+                         
                           ],
                 index:0,
                 load:function(){
@@ -56,14 +57,14 @@
                         //    this.questions[i].style.pointerEvents="none";
                         //   }
                          if(id[id.length-1]==this.questions[this.index].answer){
-                         	this.score+=3;
+                         	this.score+=1;
                          	ele.className="correct";
-                         	//ele.innerHTML="Correct";
+                         	ele.innerHTML="Correct";
                          	this.scoreCard();
                          }
                          else{
-                         	ele.className="correct";
-                         	//ele.innerHTML="Wrong";
+                         	ele.className="wrong";
+                         	ele.innerHTML="Wrong";
                          }
                 },
                 notClickAble:function(){

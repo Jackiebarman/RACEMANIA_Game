@@ -1,6 +1,53 @@
 
-<button style="position:absolute;left:40%;top:13%;transform:translate(-50%,-50%)" routerLink="/history" class="btn">
+<button id="sub" routerLink="/exam" class="btn">
          
+          <p class="neon_a" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          DRIVING TEST
+           
+           </p>
+          
+        </button>
+
+
+  <div>
+  
+     <button id="start" routerLink="/exam" class="btn">
+          
+          <p class="neon_a" >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+           PLAY
+           </p>
+         
+        </button> 
+  </div>
+
+  <!--<ng-template #elseblock>
+   
+          <button id="start" class="btn" (click)="callfun()">
+          
+          <p class="neon_a" style="color:black">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <a style="color:white" href="/profile">
+           PLAY </a>
+           </p>
+         
+        </button>
+  </ng-template>-->
+  
+
+
+         <button id="submission" routerLink="/history" class="btn">
+          
           <p class="neon_a" >
           <span></span>
           <span></span>
@@ -8,49 +55,47 @@
           <span></span>
            SUBMISSION
            </p>
-          
-        </button>
-     <button style="position:absolute;left:55%;top:13%;transform:translate(-50%,-50%)" routerLink="/exam" class="btn">
-          
-          <p class="neon_a" >
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-           START TEST
-           </p>
          
         </button> 
           
 <div [ngStyle]="{'background-image': geturl(),'background-size':getsize(),'height': '100%','background-position':'center'}">
-<h1 style="color:white;position:absolute;left:15%;top:20%;transform:translate(-50%,-50%)"><p style="color:black">WELCOME {{students[students?.length - 1].username}}</p></h1>
+<p id="common">WELCOME {{students[students?.length - 1].username}}</p>
+<br>
+ <img src = "assets/car_img/racer.png" style="width:250px;height:260px;border-radius: 50%;position:absolute;left:50%;top:45%;transform:translate(-50%,-50%)"/>
 
-<h2 style="color:white;position:absolute;left:20%;top:50%;transform:translate(-50%,-50%)">
+<h2 id="same">
 
-    <ul style="color:white" *ngFor="let employeee of employees2">
+    <ul *ngFor="let employeee of employees2">
        <div *ngIf="employeee.username === stu">
-         <a class="profile" style="color:black"> Your Rank is : <a style="color:white">{{barman}}</a> </a><br/> <br/>
-         <a class="profile" style="color:black"> Firstname : <a style="color:white">{{employeee.firstname}}</a> </a><br/> <br/>
-         <a class="profile" style="color:black">Lastname : <a style="color:white">{{employeee.lastname}} </a></a><br/> <br/>
-         <a class="profile" style="color:black">Email : <a style="color:white">{{employeee.email}} </a></a><br/> <br/>
-         <a class="profile" style="color:black"> Address : <a style="color:white">{{employeee.address}}</a> </a><br/> <br/>
-         <a class="profile" style="color:black">Phone : <a style="color:white">{{employeee.phone}} </a></a><br/>
+         <a class="profile"  > Your Rank is : <a style="color:blueviolet">{{barman}}</a> </a><br/> <br/>
+         <a class="profile"  > Firstname : <a style="color:blueviolet">{{employeee.firstname}}</a> </a><br/> <br/>
+         <a class="profile"  >Lastname : <a style="color:blueviolet">{{employeee.lastname}} </a></a><br/> <br/>
+         <a class="profile"  >Email : <a style="color:blueviolet">{{employeee.email}} </a></a><br/> <br/>
+         <a class="profile"  > Address : <a style="color:blueviolet">{{employeee.address}}</a> </a><br/> <br/>
+         <a class="profile" >Phone : <a style="color:blueviolet">{{employeee.phone}} </a></a><br/>
         </div>
     </ul>
     
     <ul style="color:blue" *ngFor="let employee of employees">
        <div *ngIf="employee.username === stu">
             
-         <a class="profile" style="color:black"> Username : <a style="color:white">{{employee.username}} </a></a><br/> <br/>
-    <a class="profile" style="color:black;position:absolute;left:190%;top:-1%;transform:translate(-50%,-50%)">Score: <input style="color:black" type="text" class="form-control" value={{employee.score}}></a>
+         <a class="profile" style="color:black"> Username : <a style="color:blueviolet">{{employee.username}} </a></a><br/> <br/>
+    <button class="profile" id="score" >Test_Score: <span><input style="color:black" type="text" class="form-control" value={{employee.score}}></span></button>
+      </div>
+    </ul>
+    <ul style="color:blue" *ngFor="let emp of employees3">
+   
+       <div *ngIf="emp.Username == stu">
+    <button class="profile" id="race_score" >Race_Score:<span> <input style="color:black" type="text" class="form-control" value={{emp.score}}></span></button>
         </div>
     </ul>
      </h2>
 
- <img src = "assets/scholar.jpg" style="width:250px;height:250px;border-radius: 50%;position:absolute;left:50%;top:45%;transform:translate(-50%,-50%)"/>
 <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-<br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
+<div style="background-color:black;height:120px"></div>
 
-<div style="background-color:black;height:43px;width:550px;position:absolute;left:80%;top:9%;transform:translate(-50%,-50%)"></div>
-<div style="background-color:black;height:55px"></div>
+
+<button routerLink="/funzone"><img id="rewards" src = "assets/car_img/rewards.jpg"/></button>
+<button id="rew" routerLink="/funzone"> Win_Prizes </button>

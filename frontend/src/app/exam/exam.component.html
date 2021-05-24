@@ -1,18 +1,25 @@
 
 <div [ngStyle]="{'background-image': geturl(),'background-size':getsize(),'height': '30%','background-position':'center'}">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+         <div class=" navbar-collapse" id="navbarSupportedContent">  
+     <p></p>
+          </div>
+    </nav>
+
      <div style="background-color:black;height:40px"></div>
 	<div class="quiz_wrapper">
            
            <div class="question" id="questionBox"> 
-           	<h1>CHOOSE YOUR TEST ---> </h1>
+           	<h1>DRIVING TEST ---> </h1>
            </div>
            
            <div class="options">
            	  <ul id="ul">
-           	  	  <li id="op1"><a href="assets/quiz.html">Easy for beginners</a></li>
-           	  	  <li id="op2"><a href="assets/quiz.html">Medium</a></li>
-           	  	  <li id="op3"><a href="assets/quiz3.html">Hard and Advanced</a></li>
-           	  	  <li id="op4"><a href="assets/quiz.html">Star Questions based on previous years</a></li>
+           	  	  <li id="op1"><a href="assets/quiz.html">Licence Test</a></li>
+           	  	  <li id="op2"><a href="assets/quiz3.html">Traffic Rule</a></li>
+           	  	  <li id="op3"><a href="assets/quiz3.html">FOUR Wheelers</a></li>
+           	  	  <li id="op4"><a href="assets/quiz.html">TWO Wheelers</a></li>
            	  </ul>
            </div>
            <div class="score">
@@ -22,24 +29,36 @@
            </div>
 
 	</div>
-<img src = "assets/index.jpeg" style="width:420px;height:360px;border-radius: 30%;position:absolute;left:85%;top:80%;transform:translate(-50%,-50%)"/>
-<button style="color:blue;background-color:white;font-family:tahoma;border-radius: 20%;position:absolute;left:85%;top:90%;transform:translate(-50%,-50%)" routerLink="/profile"><h1> Start Anonymous Test </h1></button>
-<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+
+  <div *ngIf="play; else elseblock">
+  <img src = "assets/car_img/speedcar.jpg" id="img"/>
+<button id="ano" routerLink="/play"> Start Racing</button>
+  </div>
+
+  <ng-template #elseblock>
+    <img src = "assets/car_img/lockcar.webp" id="img"/>
+<button id="ano" routerLink="/notfound"> Attend Test To Unlock</button>
+  </ng-template>
+
+
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
 </div>
-<div style="background-color:black;height:42px"></div>
+<div style="background-color:black;height:120px"></div>
 
 
-<button style="background-color:black;position:absolute;left:90%;top:11.5%;transform:translate(-50%,-50%)" class="btn" (click)="callfun()">
+<button id="logout" class="btn" (click)="callfun()">
           
-          <p class="neon_a" style="color:black">
+          <p class="neon_a" style="color:black;width:150px;height:40px">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          <a style="color:white" href="/login">
+          <a style="color:white">
            LOGOUT </a>
            </p>
          
         </button>
-
-		<div style="background-color:black;height:43px;width:150px;position:absolute;left:81.5%;top:9%;transform:translate(-50%,-50%)"></div>

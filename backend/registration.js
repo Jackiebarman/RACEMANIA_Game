@@ -118,6 +118,34 @@ app.get('/',function(req, res){
     });
  });
 
+ app.get('/racecoin',function(req, res){
+
+    var con = mysql.createConnection({
+        
+        host: "localhost",
+        user: "root",
+        password: "bhajan2000",
+        database:'Angular_project'
+    });
+    let t1="select * from racecoin_table order by score desc";
+
+    con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+       
+        con.query(t1,function(err,result){
+            if(!result) {res.status(404).send("error in mysql");console.log(err);}
+            else{
+                res.status(200).send(result);
+                console.log(result);
+               
+            } 
+    
+        });
+        
+    });
+ });
+
  app.get('/answerkey',function(req, res){
 
     var con = mysql.createConnection({
@@ -203,9 +231,11 @@ app.post('/register',function(req,res){
     });
     let t1="create table if not exists registration(firstname varchar(30),lastname varchar(30),username varchar(30) PRIMARY KEY,email varchar(50),phone bigint,address varchar(30),password varchar(20))";
     let q1="create table if not exists score_table(Username varchar(30) PRIMARY KEY,score bigint)";
+    let q2="create table if not exists racecoin_table(Username varchar(30) PRIMARY KEY,score bigint)";
     let names={firstname:this.obj.firstname,lastname:this.obj.lastname,username:this.obj.username,email:this.obj.email,phone:this.obj.phone,address:this.obj.address,password:this.obj.password};
     let ins="insert into registration SET ?";
     let ins2="insert into score_table SET ?";
+    let ins3="insert into racecoin_table SET ?";
     let names2={Username:this.obj.username,score:0};
     con.connect(function(err) {
         if (err) throw err;
@@ -213,6 +243,7 @@ app.post('/register',function(req,res){
         // con.query("use angular");
         con.query(t1);
         con.query(q1);
+        con.query(q2);
         con.query(ins,names,function(err,result){
             if(err) res.status(404).send({"error":"user already exist"})
             else res.status(200).send(this.obj);
@@ -223,11 +254,16 @@ app.post('/register',function(req,res){
             else res.status(200).send(this.obj);
         });
 
+        con.query(ins3,names2,function(err,result){
+            if(err) res.status(404).send({"error":"errorrrrr"})
+            else res.status(200).send(this.obj);
+        });
+
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
               user: 'bhajankr328@gmail.com',
-              pass: 'bhajan2000'
+              pass: 'Jackiebarman@1112000',
             }
           });
           
@@ -437,6 +473,41 @@ app.post('/updatescore',function(req,res){
      
      var score = this.obj.score;
     var t2="update score_table set score_table.score=? where score_table.username=?";
+    
+    con.connect(function(err) {
+        if (err) throw err;
+        console.log("Connected!");
+       
+        con.query(t2,[score,username],function(err,result){
+            if(!result) {res.status(404).send("error in mysql");console.log(err);}
+            else{
+                res.status(200).send(this.obj);
+                
+                console.log('success');
+               
+            } 
+    
+        });
+        
+    });
+});
+
+
+app.post('/updateracecoin',function(req,res){
+    this.obj=req.body;
+    console.log("update coin score",this.obj);
+    
+    var con = mysql.createConnection({
+        
+        host: "localhost",
+        user: "root",
+        password: "bhajan2000",
+        database:'Angular_project'
+    });
+     var username = this.obj.username;
+     
+     var score = this.obj.score;
+    var t2="update racecoin_table set racecoin_table.score=? where racecoin_table.username=?";
     
     con.connect(function(err) {
         if (err) throw err;

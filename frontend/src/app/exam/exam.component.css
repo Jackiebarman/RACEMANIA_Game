@@ -1,0 +1,37 @@
+#logout{
+    background-color:black;width:160px;height:60px;position:absolute;left:94%;top:4%;transform:translate(-50%,-50%);
+
+}
+#ano{
+    font-size: 40px;
+    color:blue;background-color:white;font-family:tahoma;border-radius: 20%;position:absolute;left:85%;top:90%;transform:translate(-50%,-50%);
+}
+#img{
+    width:420px;height:360px;border-radius: 30%;position:absolute;left:85%;top:80%;transform:translate(-50%,-50%);
+}
+
+@media screen and (max-width:800px){
+    #logout{
+        background-color:black;width:160px;height:60px;position:absolute;left:85%;top:4%;transform:translate(-50%,-50%);
+    }
+    #ano{
+        font-size: 30px;
+        color:blue;background-color:white;font-family:tahoma;border-radius: 20%;position:absolute;left:84%;top:90%;transform:translate(-50%,-50%);
+    }
+    #img{
+        width:320px;height:300px;border-radius: 30%;position:absolute;left:85%;top:80%;transform:translate(-50%,-50%);
+    }
+}
+
+@media screen and (max-width:500px){
+    #logout{
+        background-color:black;width:160px;height:60px;position:absolute;left:80%;top:4%;transform:translate(-50%,-50%);
+    }
+    #ano{
+        font-size: 20px;
+        color:blue;background-color:white;font-family:tahoma;border-radius: 20%;position:absolute;left:84%;top:90%;transform:translate(-50%,-50%);
+    }
+    #img{
+        width:300px;height:280px;border-radius: 30%;position:absolute;left:85%;top:80%;transform:translate(-50%,-50%);
+    }
+}

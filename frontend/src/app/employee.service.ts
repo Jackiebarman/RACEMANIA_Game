@@ -16,6 +16,7 @@ export class EmployeeService {
   private _url2: string = 'http://localhost:3000/score';
   private _url3: string = 'http://localhost:3000/history';
   private _url4: string = 'http://localhost:3000/answerkey';
+  private _url5: string = 'http://localhost:3000/racecoin';
 
   constructor(private http:HttpClient) { }
 
@@ -25,6 +26,10 @@ export class EmployeeService {
   }
   getscore(): Observable<score[]>{
     return this.http.get<score[]>(this._url2)
+                    .catch(this.errorHandler);
+  }
+  getracecoin(): Observable<score[]>{
+    return this.http.get<score[]>(this._url5)
                     .catch(this.errorHandler);
   }
   gethistory(): Observable<history[]>{

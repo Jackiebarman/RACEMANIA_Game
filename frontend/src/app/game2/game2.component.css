@@ -1,0 +1,253 @@
+#image{
+    background-image: url(../../assets/car_img/bgcar.jpg);
+    background-size:100%;
+    background-position:center;
+    width:100%;
+    height:950px;
+}
+#let{
+    width:200px;height:78px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+    position:absolute;left:50%;top:35%;transform:translate(-50%,-50%);
+}
+#login{
+    position:absolute;left:95%;top:21%;transform:translate(-50%,-50%);
+}
+
+#ins{
+    color:blue;
+    font-size: 34px;
+    width:420px;
+    height:60px;
+    background-color:white;
+    border-radius: 5%;
+    position:absolute;
+    left:50%;
+    top:49%;
+    transform:translate(-50%,-50%);
+}
+
+#zero{
+    width:350px;
+    border-radius: 50%;
+    position:absolute;
+    left:50%;
+    top:15%;
+    transform:translate(-50%,-50%);
+}
+
+
+#first{
+    width:350px;
+    border-radius: 50%;
+    position:absolute;
+    left:20%;
+    top:30%;
+    transform:translate(-50%,-50%);
+}
+#second{
+    width:350px;border-radius: 50%;
+    height:200px;
+    position:absolute;left:80%;top:30%;transform:translate(-50%,-50%);
+}
+#third{
+    width:350px;border-radius: 50%;
+    height:200px;
+    position:absolute;left:20%;top:60%;transform:translate(-50%,-50%);
+}
+#fourth{
+    width:350px;border-radius: 50%;
+    height:200px;
+    position:absolute;left:80%;top:60%;transform:translate(-50%,-50%);
+}
+#bottom{
+    color:black;width:100%;height:30px;background-color:black;
+}
+@media screen and (max-width:1200px){
+    #image{
+        background-image: url(../../assets/car_img/height_car_2.jpeg);
+        background-size:140%;
+        background-position:center;
+        width:100%;
+        height:950px;
+    }
+    #let{
+        width:120px;height:50px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+    }
+    #login{
+        position:absolute;left:95%;top:21%;transform:translate(-50%,-50%);
+    }
+    
+    #ins{
+        width:250px;
+        height:60px;
+        border-radius: 5%;
+        position:absolute;
+        left:48%;
+        top:49%;
+        transform:translate(-50%,-50%);
+    }
+    
+    #zero{
+        width:240px;border-radius: 50%;
+        height:150px;
+        position:absolute;
+        left:50%;
+        top:15%;
+        transform:translate(-50%,-50%);
+    }
+    
+    
+    #first{
+        width:240px;border-radius: 50%;
+        height:150px;
+        position:absolute;
+        left:20%;
+        top:30%;
+        transform:translate(-50%,-50%);
+    }
+    #second{
+        width:240px;border-radius: 50%;
+        height:150px;
+        position:absolute;left:80%;top:30%;transform:translate(-50%,-50%);
+    }
+    #third{
+        width:240px;border-radius: 50%;
+        height:150px;
+        position:absolute;left:20%;top:60%;transform:translate(-50%,-50%);
+    }
+    #fourth{
+        width:240px;border-radius: 50%;
+        height:150px;
+        position:absolute;left:80%;top:60%;transform:translate(-50%,-50%);
+    }
+    #bottom{
+        color:black;width:100%;height:120px;background-color:black;
+    }
+}
+@media screen and (max-width:800px){
+    #image{
+        background-image: url(../../assets/car_img/height_car_2.jpeg);
+        background-size:140%;
+        background-position:center;
+        width:100%;
+        height:950px;
+    }
+    #let{
+        width:120px;height:50px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+    }
+    #login{
+        position:absolute;left:95%;top:21%;transform:translate(-50%,-50%);
+    }
+    
+    #ins{
+        width:250px;
+        height:60px;
+        border-radius: 5%;
+        position:absolute;
+        left:48%;
+        top:49%;
+        transform:translate(-50%,-50%);
+    }
+    
+    #zero{
+        width:200px;border-radius: 50%;
+        height:140px;
+        position:absolute;
+        left:50%;
+        top:15%;
+        transform:translate(-50%,-50%);
+    }
+    
+    
+    #first{
+        width:200px;border-radius: 50%;
+        height:140px;
+        position:absolute;
+        left:20%;
+        top:30%;
+        transform:translate(-50%,-50%);
+    }
+    #second{
+        width:200px;border-radius: 50%;
+        height:140px;
+        position:absolute;left:80%;top:30%;transform:translate(-50%,-50%);
+    }
+    #third{
+        width:200px;border-radius: 50%;
+        height:140px;
+        position:absolute;left:20%;top:60%;transform:translate(-50%,-50%);
+    }
+    #fourth{
+        width:200px;border-radius: 50%;
+        height:140px;
+        position:absolute;left:80%;top:60%;transform:translate(-50%,-50%);
+    }
+    #bottom{
+        color:black;width:100%;height:120px;background-color:black;
+    }
+}
+@media screen and (max-width:500px){
+    #image{
+        background-image: url(../../assets/car_img/height_car_2.jpeg);
+        background-size:140%;
+        background-position:center;
+        width:100%;
+        height:950px;
+    }
+    #let{
+        width:120px;height:50px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+    }
+    #login{
+        position:absolute;left:95%;top:21%;transform:translate(-50%,-50%);
+    }
+    
+    #ins{
+        width:250px;
+        height:60px;
+        border-radius: 5%;
+        position:absolute;
+        left:48%;
+        top:49%;
+        transform:translate(-50%,-50%);
+    }
+    
+    #zero{
+        width:150px;border-radius: 50%;
+        height:100px;
+        position:absolute;
+        left:50%;
+        top:15%;
+        transform:translate(-50%,-50%);
+    }
+    
+    
+    #first{
+        width:150px;border-radius: 50%;
+        height:100px;
+        position:absolute;
+        left:20%;
+        top:30%;
+        transform:translate(-50%,-50%);
+    }
+    #second{
+        width:150px;border-radius: 50%;
+        height:100px;
+        position:absolute;left:80%;top:30%;transform:translate(-50%,-50%);
+    }
+    #third{
+        width:150px;border-radius: 50%;
+        height:100px;
+        position:absolute;left:20%;top:60%;transform:translate(-50%,-50%);
+    }
+    #fourth{
+        width:150px;border-radius: 50%;
+        height:100px;
+        position:absolute;left:80%;top:60%;transform:translate(-50%,-50%);
+    }
+    #bottom{
+        color:black;width:100%;height:120px;background-color:black;
+    }
+}

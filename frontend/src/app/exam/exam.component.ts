@@ -8,9 +8,20 @@ declare const myfun:any;
 })
 export class ExamComponent implements OnInit {
   xyz =  localStorage.getItem("initialscore");
+  race_score=localStorage.getItem("racecoin");
+  play=false;
+
+
 
   callfun(){
-    myfun();
+    if(confirm("Are you sure to logout?"))
+  {
+  window.location.href = '/login';
+  myfun();
+  }
+  else{
+     
+  }
   }
   constructor() { }
   geturl()
@@ -22,6 +33,18 @@ export class ExamComponent implements OnInit {
     return "120%";
   }
   ngOnInit() {
+    let xx=this.xyz;
+    console.log("Score_XX:",xx);
+    if (parseInt(xx, 10) > parseInt('4', 10)) 
+    {
+        this.play=true;
+    } 
+    else
+    {
+        this.play=false;
+    }
+    console.log(this.play);
+    console.log(this.race_score);
   }
 
 }

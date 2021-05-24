@@ -1,0 +1,39 @@
+#img{
+    background-image: url(../../assets/car_img/back_car.jpg);
+    background-size:100%;
+    background-position:center;
+    width:100%;
+    height:950px;
+}
+@media screen and (max-width:1000px){
+    #img{
+        background-image: url(../../assets/car_img/back_car.jpg);
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        width:100%;
+        height:950px;
+    }
+    #top{
+        color:black;width:60%;height:60px;background-color:black;
+    }
+    #bottom{
+        color:black;width:100%;height:2px;background-color:black;
+    }
+}
+@media screen and (max-width:500px){
+    #img{
+        background-image: url(../../assets/car_img/back_car.jpg);
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+        width:100%;
+        height:950px;
+    }
+    #top{
+        color:black;width:60%;height:60px;background-color:black;
+    }
+    #bottom{
+        color:black;width:100%;height:2px;background-color:black;
+    }
+}

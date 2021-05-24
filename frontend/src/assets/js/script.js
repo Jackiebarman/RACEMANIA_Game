@@ -11,11 +11,13 @@
 
       var app={
                 questions:[
-                          {q:'HTML stands for?', options:['Hyper Text Markup Language','High Text Markup Language','Hyper Tabular Markup Language','None of these'],answer:1},
+                   
+                         {q:'Red signal in traffic implies: ',options:['Please stop your vehicle','Please slow down your vehicle','Move with caution','All of the above'],answer:1},
+        
+                          {q:'On a one-way road, you should not: ', options:['Honk a lot','Over-speed','Park on the way','Drive in the reverse gear'],answer:3},
 
-                          {q:'which of the following tag is used to mark a begining of paragraph ?',options:['TD','br','P','tr'],answer:3},
-
-                          {q:'Correct HTML tag for the largest heading is ?',options:['h4','h1','h8','h9'],answer:2}
+                          {q:'The driver of a vehicle must drive on the : ',options:['Road’s Right side','Road’s Left side','in the middle','Any of the above'],answer:2}
+        
                           ],
                 index:0,
                 load:function(){

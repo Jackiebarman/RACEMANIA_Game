@@ -1,0 +1,71 @@
+
+#first{
+    position:absolute;
+    left:94%;top:4%;
+    transform:translate(-50%,-50%);
+}
+#scholar_img{
+    width:340px;height:460px;border-radius: 50%;position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+}
+
+#second{
+    width:430px;height:350px;border-radius: 60%;position:absolute;left:20%;top:70%;transform:translate(-50%,-50%);
+}
+#third{
+    width:430px;height:350px;border-radius: 60%;position:absolute;left:82%;top:70%;transform:translate(-50%,-50%);
+}
+#text1{
+    color:blue;background-color:white;font-family:tahoma;border-radius: 20%;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+}
+#font{
+    font-size: 40px;
+}
+@media screen and (max-width:800px){
+    
+    #first{
+        position:absolute;
+        left:85%;top:4%;
+        transform:translate(-50%,-50%);
+    }
+    #scholar_img{
+        width:250px;height:320px;border-radius: 50%;position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+    }
+    #second{
+        width:250px;height:320px;border-radius: 50%;position:absolute;left:20%;top:70%;transform:translate(-50%,-50%);
+    }
+    #third{
+        width:250px;height:320px;border-radius: 50%;position:absolute;left:82%;top:70%;transform:translate(-50%,-50%);
+    }
+    #font{
+        font-size: 30px;
+    }
+    
+
+}
+@media screen and (max-width:500px){
+
+    #first{
+        position:absolute;
+        left:80%;top:4%;
+        transform:translate(-50%,-50%);
+    }
+    #scholar_img{
+        width:200px;height:300px;border-radius: 50%;position:absolute;left:50%;top:33%;transform:translate(-50%,-50%);
+    }
+    #second{
+        width:200px;height:300px;border-radius: 50%;position:absolute;left:20%;top:70%;transform:translate(-50%,-50%);
+    }
+
+    #third{
+        width:200px;height:300px;border-radius: 50%;position:absolute;left:82%;top:70%;transform:translate(-50%,-50%);
+    }
+
+    #text1{
+       
+        color:blue;background-color:white;font-size:8px;font-family:tahoma;border-radius: 20%;position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);
+    }
+
+    #font{
+        font-size: 20px;
+    }
+}

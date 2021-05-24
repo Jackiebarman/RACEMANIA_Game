@@ -21,7 +21,14 @@ export class LoggedinuserComponent implements OnInit {
  clicked=0
 
  callfun(){
+  if(confirm("Are you sure to logout?"))
+  {
+  window.location.href = '/login';
   myfun();
+  }
+  else{
+     
+  }
 }
 
  public employees = [];
@@ -63,15 +70,18 @@ export class LoggedinuserComponent implements OnInit {
     localStorage.setItem("username",this.stu);
     localStorage.setItem("password",this.pass);   
     console.log("employees array:",this.employees);
+
     this._employeeService.getscore().subscribe(data => {      
       this.users.push(data);               
       this.users2 = Object.assign({}, this.users[0]);
+
       console.log("users2:",this.users2);
       var j:any;
       for(j in this.users2){
         if(this.users2[j].username == this.stu)
         {
           localStorage.setItem("initialscore",this.users2[j].score);
+         // localStorage.setItem("initial_racescore",this.users2[j].score);
           localStorage.setItem("rank",j);
           console.log("users.name:",this.users2[j].username);
           console.log("after",this.xyz);
@@ -79,7 +89,22 @@ export class LoggedinuserComponent implements OnInit {
       }
       
       });
+
+      this._employeeService.getracecoin().subscribe(data => {      
+      this.users3.push(data);               
+      this.users4 = Object.assign({}, this.users3[0]);
+
+      console.log("users4:",this.users4);
+      var j:any;
+      for(j in this.users4){
+        if(this.users4[j].Username == this.stu)
+        {
+          localStorage.setItem("initial_racescore",this.users4[j].score);
+         // localStorage.setItem("initial_racescore",this.users2[j].score);
+        }
+      }
       
+      });
   }
 
 }

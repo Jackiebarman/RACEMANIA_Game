@@ -1,0 +1,111 @@
+
+.instructions{
+    position: absolute;
+    margin: 0px;
+    top: 0px;
+    left:0%;
+    width: 154px;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: justify;
+}
+
+
+#let{
+    width:200px;height:78px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+    position:absolute;left:1100%;top:550%;transform:translate(-50%,-50%);
+}
+
+#survey{
+    color:blue;background-color:white;font-family:tahoma;
+    position:absolute;left:1050%;top:8850%;
+}
+
+
+
+#go{
+    width:200px;height:78px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+    position:absolute;left:120%;top:550%;transform:translate(-50%,-50%);
+}
+
+#countdown{
+    width:67px;height:35px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+    position:absolute;left:84%;top:30%;transform:translate(-50%,-50%);
+}
+
+#score{
+    padding-top: 11px;
+    width:200px;height:78px;color:black;background-color:rgb(94, 99, 94);font-family:tahoma;border-radius: 10%;
+    position:absolute;left:590%;top:400%;transform:translate(-50%,-50%);
+}
+
+#scores{
+    width:200px;height:78px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+    position:absolute;left:110%;top:400%;transform:translate(-50%,-50%);
+}
+
+.loader{
+   width: 100%;
+   height: 100%;
+   background: #000000ab;
+   position: absolute;
+   text-align: center;
+   color: #fff;
+}
+
+.message {
+    text-align: center;
+    margin-top: 20%;
+}
+
+.loader i {
+    font-size: 50px;
+}
+    
+
+
+.play-ground{
+    display: grid;
+    margin: auto;
+    background-color:rgb(94, 99, 94);
+}
+@media screen and (max-width:1300px)
+{
+    #go{
+        width:200px;height:78px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:120%;top:550%;transform:translate(-50%,-50%);
+    }
+    #let{
+        width:200px;height:78px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:1100%;top:550%;transform:translate(-50%,-50%);
+    }
+    #score{
+        width:200px;height:78px;color:black;background-color:rgb(94, 99, 94);font-family:tahoma;border-radius: 10%;
+        position:absolute;left:600%;top:340%;transform:translate(-50%,-50%);
+    }
+}
+
+@media screen and (max-width:800px){
+    #go{
+        width:100px;height:40px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:60%;top:550%;transform:translate(-50%,-50%);
+    }
+    #let{
+        width:100px;height:40px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:220%;top:550%;transform:translate(-50%,-50%);
+    }
+    #score{
+        width:100px;height:40px;color:black;background-color:rgb(94, 99, 94);font-family:tahoma;border-radius: 10%;
+        position:absolute;left:135%;top:340%;transform:translate(-50%,-50%);
+    }
+    #survey{
+        color:blue;background-color:white;font-family:tahoma;
+        position:absolute;left:200%;top:8850%;
+        font-size: 10px;
+    }
+    #countdown{
+        width:100px;height:30px;color:blue;background-color:white;font-family:tahoma;border-radius: 10%;
+        position:absolute;left:140%;top:560%;transform:translate(-50%,-50%);
+    }
+}
